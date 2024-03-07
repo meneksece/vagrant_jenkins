@@ -20,9 +20,11 @@ $script = <<ENDSCRIPT
   sudo yum upgrade
   sudo curl -O https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.rpm
   sudo rpm -ivh jdk-21_linux-x64_bin.rpm
+  sudo yum upgrade
   sudo yum install -y jenkins
-  sudo systemctl start jenkins.service
+  sleep 5
   sudo systemctl enable jenkins.service
+  sudo systemctl start jenkins.service
 ENDSCRIPT
 
 Vagrant.configure("2") do |config|
