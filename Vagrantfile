@@ -35,7 +35,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "centos/7"
+  config.vm.box = "rockylinux/9"
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.ssh.username = "vagrant"
   config.ssh.private_key_path=["~/.vagrant.d/insecure_private_key"]
